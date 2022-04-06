@@ -1,7 +1,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: poppins;
   box-sizing: border-box;
 }
 a {
@@ -11,41 +10,87 @@ ul {
   list-style: none;
 }
 body {
-  background-repeat: no-repeat;
-  background-image: url("images/orange wavy bg - 2.png");
-  background-size: contain;
-  margin: 0px;
-  padding: 100px 0px 0px 0px;
+  margin: 0;
 }
-
-h6 {
-  color: #f33c3c;
-  font-size: 0.6rem;
-  font-weight: 600;
-  padding: 5px;
-}
-
-
-/*------Slide Articles------*/
-.slick-track {
-  display: flex !important;
-}
-
-/* .slick-slide {
-  height: inherit !important;
-} */
 
 /*----- Image Slide -----*/
 
-.carousel{
-  width: 70%;
-  /*height: auto;*/
+
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
   margin: auto;
-  margin-bottom: 50px;
 }
 
+.slideshow-container .bg{
+  position:absolute;
+  width: 100%; 
+  max-height: 100vh;
+  margin: auto;
+  object-fit: contain;
+}
+
+.Containers {
+  display: none;
+  
+}
+
+.Containers img{
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-height: 50%;
+  position:relative;
+  z-index:5;
+}
+
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  padding: 17px;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all ease 0.4s;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover, .forward:hover {
+  background-color: orange;
+}
+
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #C3D600;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.5s ease;
+  margin-bottom: 100px;
+}
+
+.enable, .dots:hover {
+  background-color: orange;
+}
+
+
+
+/* --------Latest Events-------- */
+
 .rectangle{
-  background: orange;
+  background: #F28500;
   margin: auto;
   width: 100%;
   line-height: 70px;
@@ -53,7 +98,8 @@ h6 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 40px;
-  box-sizing:border-box
+  box-sizing:border-box;
+  color: white;
 }
 
 
@@ -71,7 +117,6 @@ h6 {
 #bannerimage {
   margin-top: 50px;
   display: block;
-  margin-bottom: 100px; 
   text-align: justify;
   background-position: center;
   
@@ -88,19 +133,23 @@ h6 {
 
 
 /*---------BLOG CARDS----------*/
-.card-title{
-  color: black;
+.card-deck{
+  margin: 50px 100px 0px 100px
 }
-.card-title:hover{
-  color: orange;
-}
-p{
+.card-body p{
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #656565;
+}
+.card-body a{
+  color: rgb(26, 26, 26);
+}
+.card-body a:hover{
+  color: #F28500;
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {  
@@ -127,17 +176,3 @@ p{
     .xl {color:red;font-weight:bold;}
 }
  
-
-.div-wrapper {
-    position: relative;
-    height: 300px;
-    width: 1000px;
-   
-    background-position: center;
-}
-
-.div-wrapper img {
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-}
