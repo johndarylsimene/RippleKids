@@ -182,7 +182,7 @@ img {
 .team-1 {
     margin-top: 100px;
     margin-bottom: 200px;
-    background: linear-gradient(burlywood, lightgray);
+    background: linear-gradient(navajowhite, #f28500);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -398,7 +398,7 @@ img {
     padding: 70px 20px 20px 20px;
     margin-top: -50px;
     text-align: center;
-    background: linear-gradient(burlywood, lightgray);
+    background: linear-gradient(navajowhite, #f28500);
     transition: all .5s;
 }
 
@@ -451,7 +451,7 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    background: linear-gradient(lightsalmon, lightgray);
+    background: linear-gradient(#c3d600, #f28500);
 }
 
 .team-3:hover {
