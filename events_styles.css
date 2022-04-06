@@ -1,0 +1,143 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: poppins;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-repeat: no-repeat;
+  background-image: url("images/orange wavy bg - 2.png");
+  background-size: contain;
+  margin: 0px;
+  padding: 100px 0px 0px 0px;
+}
+
+h6 {
+  color: #f33c3c;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 5px;
+}
+
+
+/*------Slide Articles------*/
+.slick-track {
+  display: flex !important;
+}
+
+/* .slick-slide {
+  height: inherit !important;
+} */
+
+/*----- Image Slide -----*/
+
+.carousel{
+  width: 70%;
+  /*height: auto;*/
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.rectangle{
+  background: orange;
+  margin: auto;
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  box-sizing:border-box
+}
+
+
+/*---------Article Cards---------*/
+
+.card-img-top {
+  width:  100%;
+  height: 250px;
+  object-fit: cover;
+}
+.card .card-body{
+  min-height: 200px;
+}
+
+#bannerimage {
+  margin-top: 50px;
+  display: block;
+  margin-bottom: 100px; 
+  text-align: justify;
+  background-position: center;
+  
+}
+.banner{
+  width: 100%;
+  height: auto;
+}
+
+.banner img{
+  display: inline-block;
+  max-height: 10%;
+}
+
+
+/*---------BLOG CARDS----------*/
+.card-title{
+  color: black;
+}
+.card-title:hover{
+  color: orange;
+}
+p{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #656565;
+}
+
+@media (max-width: 576px) {  
+  .xs {color:red;font-weight:bold;}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:768px) {  
+  .sm {color:red;font-weight:bold;}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width:992px) {  
+ .md {color:red;font-weight:bold;}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width:1200px) { 
+ .lg {color:red;font-weight:bold;}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .xl {color:red;font-weight:bold;}
+}
+ 
+
+.div-wrapper {
+    position: relative;
+    height: 300px;
+    width: 1000px;
+   
+    background-position: center;
+}
+
+.div-wrapper img {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}
