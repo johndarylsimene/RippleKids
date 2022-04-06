@@ -443,123 +443,133 @@ img {
 /**********************************/
 /********* Team #3 Style **********/
 /**********************************/
-.team-3 {
-    padding: 10px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    background: linear-gradient(#c3d600, #f28500);
+
+body::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  clip-path: inset(47% 0 0 0);
+  z-index: -1;
+  height: 100%;
+}
+::selection{
+  background:	#FF676D;
+  color: #fff;
+}
+.first{
+  max-width: 950px;
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+}
+.first .main-card{
+  display: flex;
+  justify-content: space-evenly;
+  width: 200%;
+  transition: 1s;
+}
+#two:checked ~ .main-card{
+  margin-left: -100%;
+}
+.first .main-card .cards{
+  width: calc(100% / 2 - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.main-card .cards .card{
+  width: calc(100% / 3 - 10px);
+  background: linear-gradient(#ffe0ae, #c3d600);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .card .content .img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #f28500;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .content .name{
+  font-size: 20px;
+  font-weight: 500;
+}
+.card .content .job{
+  font-size: 20px;
+  color: #FF676D;
+}
+.card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+
 }
 
-.team-3:hover {
-    transform: rotateY(180deg);
-}
 
-.team-3 .team-img {
-    position: relative;
-    font-size: 0;
-    text-align: center;
-    margin-bottom: 30px;
+ .first .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
-
-.team-3 .team-img img {
-    width: 60%;
-    height: auto;
-    border-radius: 50%;
+.button label{
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  background: #001f3d;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-
-.team-3 .team-content {
-    text-align: center;
+.button label.active{
+  width: 35px;
 }
-
-.team-3 .team-content h2 {
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
+#one:checked ~ .button .one{
+  width: 35px;
 }
-
-.team-3 .team-content h3 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 0;
+#one:checked ~ .button .two{
+  width: 15px;
 }
-
-.team-3 .team-overlay {
-    position: absolute;
+#two:checked ~ .button .one{
+  width: 15px;
+}
+#two:checked ~ .button .two{
+  width: 35px;
+}
+input[type="radio"]{
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    /* margin: 20px 0 10px 0; */
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background: #ffffff;
-    border-radius: 5px;
-    transform: rotateY(180deg);
+  }
 }
-
-.team-3 .team-overlay p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: center;
-}
-
-.team-3 .team-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0;
-}
-
-.team-3 .team-social a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    padding: 11px 0 10px 0;
-    font-size: 16px;
-    line-height: 16px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 100%;
-    transition: all .3s;
-}
-
-.team-3 .team-social a.social-tw {
-    background: #00acee;
-}
-
-.team-3 .team-social a.social-fb {
-    background: #3b5998;
-}
-
-.team-3 .team-social a.social-li {
-    background: #0e76a8;
-}
-
-.team-3 .team-social a.social-in {
-    background: #3f729b;
-}
-
-.team-3 .team-social a.social-yt {
-    background: #c4302b;
-}
-
-.team-3 .team-social a:last-child {
-    margin-right: 0;
-}
-
-.team-3 .team-social a:hover {
-    background: #222222;
-}
-
 
